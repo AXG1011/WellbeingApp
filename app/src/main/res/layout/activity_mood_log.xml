@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MoodDiaryActivity">
+
+    <ImageView
+        android:id="@+id/great2"
+        android:layout_width="47dp"
+        android:layout_height="48dp"
+        android:src="@drawable/great"
+        tools:layout_editor_absoluteX="284dp"
+        tools:layout_editor_absoluteY="87dp" />
+
+    <ImageView
+        android:id="@+id/meh2"
+        android:layout_width="47dp"
+        android:layout_height="48dp"
+        android:src="@drawable/meh"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="87dp" />
+
+    <ImageView
+        android:id="@+id/good2"
+        android:layout_width="47dp"
+        android:layout_height="48dp"
+        android:src="@drawable/good"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="87dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="47dp"
+        android:layout_height="14dp"
+        android:gravity="center_horizontal"
+        android:text="Great"
+        android:textAlignment="center"
+        android:textColor="#008000"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="284dp"
+        tools:layout_editor_absoluteY="135dp" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="47dp"
+        android:layout_height="14dp"
+        android:gravity="center_horizontal"
+        android:text="Terrible"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="135dp" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="47dp"
+        android:layout_height="14dp"
+        android:gravity="center_horizontal"
+        android:text="Bad"
+        android:textAlignment="center"
+        android:textColor="#FF7F50"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="135dp" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="47dp"
+        android:layout_height="14dp"
+        android:gravity="center_horizontal"
+        android:text="Meh"
+        android:textAlignment="center"
+        android:textColor="#FFD700"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="135dp" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="47dp"
+        android:layout_height="14dp"
+        android:gravity="center_horizontal"
+        android:text="Good"
+        android:textAlignment="center"
+        android:textColor="#9ACD32"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="135dp" />
+
+    <ImageView
+        android:id="@+id/terrible2"
+        android:layout_width="47dp"
+        android:layout_height="48dp"
+        android:src="@drawable/terrible"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="87dp" />
+
+    <ImageView
+        android:id="@+id/bad2"
+        android:layout_width="47dp"
+        android:layout_height="48dp"
+        android:src="@drawable/bad"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="87dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:text="Your mood diary"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

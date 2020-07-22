@@ -31,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        setTitle("Triad - Sign In");
 
         firebaseAuthorisation = FirebaseAuth.getInstance();
         emailId = findViewById(R.id.editTextTextEmailAddress);

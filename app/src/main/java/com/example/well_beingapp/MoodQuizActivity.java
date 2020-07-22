@@ -11,14 +11,15 @@ import android.widget.TextView;
 import java.text.DateFormat;
 import java.util.Calendar;
 
-public class SelfActivity extends AppCompatActivity {
+public class MoodQuizActivity extends AppCompatActivity {
 
     Button logEntry;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_self);
+        setContentView(R.layout.activity_mood_quiz);
+        setTitle("Mood Quiz");
 
         Calendar calendar = Calendar.getInstance();
         String currentDate = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.getTime());
@@ -29,12 +30,10 @@ public class SelfActivity extends AppCompatActivity {
         logEntry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intToMoodDiary = new Intent(SelfActivity.this, MoodDiaryActivity.class);
+                Intent intToMoodDiary = new Intent(MoodQuizActivity.this, MoodLogActivity.class);
                 startActivity(intToMoodDiary);
             }
         });
-
-
 
     }
 
