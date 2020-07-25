@@ -20,14 +20,13 @@ public class MoodScoreActivity extends AppCompatActivity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int) (width*.9), (int) (height*.4));
-
+        getWindow().setLayout((int) (width*.9), (int) (height*.6));
 
         Intent intent = getIntent();
-        int number = intent.getIntExtra(MoodQuizActivity.EXTRA_NUMBER, 0);
+        int finalScore = intent.getIntExtra(MoodQuizActivity.EXTRA_NUMBER, 0);
 
-        TextView textViewScore = findViewById(R.id.daily_mood_score);
-        textViewScore.setText("" + number);
+        TextView textViewScore = findViewById(R.id.final_mood_score);
+        textViewScore.setText("" + finalScore + "%");
 
     }
 }

@@ -14,7 +14,10 @@
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal|left"
         android:minWidth="25px"
-        android:minHeight="25px">
+        android:minHeight="25px"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
 
         <ImageView
             android:layout_width="match_parent"
@@ -31,6 +34,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:gravity="center_horizontal"
+            android:textColor="#000"
             android:text="Date"
             android:textSize="13dp"
             android:textAlignment="center" />
@@ -38,17 +42,17 @@
         <TextView
             android:id="@+id/textView10"
             android:layout_width="match_parent"
-            android:layout_height="53dp"
+            android:layout_height="176dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:gravity="center_horizontal"
-            android:text="Please indicate for each of the five statements which is closest to how you have been feeling over the course of today"
+            android:text="Please enter a number from 0 to 5 for each of the five statements which best reflects how you've been feeling over the course of today! \nThe ratings are as follows: \n\n 5 - 'All of today' \n 4 -  'Most of today' \n 3 - 'More than half of today' \n 2 - 'Less than half of today' \n 1 - 'Some of today' \n 0 - 'At no time today'"
             android:textAlignment="center"
             android:textSize="13dp" />
 
         <TextView
-            android:id="@+id/textView21"
+            android:id="@+id/statement_one"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -64,89 +68,17 @@
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="68dp" />
 
-
-        <RadioGroup
-            android:id="@+id/statement_one"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/entry_one"
+            android:textAlignment="center"
+            android:textSize="13dp"
+            android:layout_width="47dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="15dp"
-            android:onClick="onRadioButtonClicked">
-
-            <RadioButton
-                android:id="@+id/option_1_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="5 - All of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_1_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="4 - Most of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_1_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="3 - More than half of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_1_4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="2 - Less than half of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_1_5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="1 - Some of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_1_6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="0 - At no time today"
-                android:textSize="12dp" />
-
-        </RadioGroup>
+            android:ems="10"
+            android:inputType="number" />
 
         <TextView
-            android:id="@+id/textView22"
+            android:id="@+id/statement_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -162,87 +94,17 @@
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="68dp" />
 
-        <RadioGroup
-            android:id="@+id/statement_two"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/entry_two"
+            android:textAlignment="center"
+            android:textSize="13dp"
+            android:layout_width="42dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="15dp">
-
-            <RadioButton
-                android:id="@+id/option_2.1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="5 - All of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_2.2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="4 - Most of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_2.3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="3 - More than half of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_2.4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="2 - Less than half of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_2.5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="1 - Some of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_2.6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="0 - At no time today"
-                android:textSize="12dp" />
-
-        </RadioGroup>
+            android:ems="10"
+            android:inputType="number"/>
 
         <TextView
-            android:id="@+id/textView23"
+            android:id="@+id/statement_three"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -258,87 +120,17 @@
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="68dp" />
 
-        <RadioGroup
-            android:id="@+id/statement_three"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/entry_three"
+            android:textAlignment="center"
+            android:textSize="13dp"
+            android:layout_width="42dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="15dp">
-
-            <RadioButton
-                android:id="@+id/option_3.1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="5 - All of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_3.2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="4 - Most of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_3.3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="3 - More than half of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_3.4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="2 - Less than half of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_3.5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="1 - Some of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_3.6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="0 - At no time today"
-                android:textSize="12dp" />
-
-        </RadioGroup>
+            android:ems="10"
+            android:inputType="number"/>
 
         <TextView
-            android:id="@+id/textView24"
+            android:id="@+id/statement_four"
             android:layout_width="259dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -354,87 +146,17 @@
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="68dp" />
 
-        <RadioGroup
-            android:id="@+id/statement_four"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/entry_four"
+            android:textAlignment="center"
+            android:textSize="13dp"
+            android:layout_width="42dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="15dp">
-
-            <RadioButton
-                android:id="@+id/option_4.1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="5 - All of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_4.2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="4 - Most of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_4.3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="3 - More than half of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_4.4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="2 - Less than half of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_4.5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="1 - Some of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_4.6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="0 - At no time today"
-                android:textSize="12dp" />
-
-        </RadioGroup>
+            android:ems="10"
+            android:inputType="number"/>
 
         <TextView
-            android:id="@+id/textView25"
+            android:id="@+id/statement_five"
             android:layout_width="269dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -450,84 +172,14 @@
             tools:layout_editor_absoluteX="94dp"
             tools:layout_editor_absoluteY="68dp" />
 
-        <RadioGroup
-            android:id="@+id/statement_five"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/entry_five"
+            android:textAlignment="center"
+            android:textSize="13dp"
+            android:layout_width="42dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="15dp">
-
-            <RadioButton
-                android:id="@+id/option_5.1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="5 - All of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_5.2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="4 - Most of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_5.3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="3 - More than half of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_5.4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="2 - Less than half of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_5.5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="1 - Some of today"
-                android:textSize="12dp" />
-
-            <RadioButton
-                android:id="@+id/option_5.6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="0 - At no time today"
-                android:textSize="12dp" />
-
-        </RadioGroup>
+            android:ems="10"
+            android:inputType="number"/>
 
         <Button
             android:id="@+id/calculate_score_button"
@@ -544,6 +196,20 @@
             android:text="Calculate score"
             tools:layout_editor_absoluteX="132dp"
             tools:layout_editor_absoluteY="576dp" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:textColor="#000"
+            android:text="0"
+            android:textSize="0dp"
+            android:textAlignment="center"
+            android:layout_marginBottom="30dp"/>
 
     </LinearLayout>
 </ScrollView>
