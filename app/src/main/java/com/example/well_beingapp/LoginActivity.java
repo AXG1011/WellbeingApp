@@ -79,13 +79,12 @@ public class LoginActivity extends AppCompatActivity {
                             (LoginActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(!task.isSuccessful()){
-                                Toast.makeText(LoginActivity.this, "Login error, please try again",
-                                        Toast.LENGTH_SHORT).show();
+                            if(task.isSuccessful()){
+                                Toast.makeText(LoginActivity.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                             }
-                            else{
-                                Intent intToHome = new Intent(LoginActivity.this, HomeActivity.class);
-                                startActivity(intToHome);
+                            else {
+                                Toast.makeText(LoginActivity.this, "Login Error " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
@@ -95,6 +94,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
         textViewSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
