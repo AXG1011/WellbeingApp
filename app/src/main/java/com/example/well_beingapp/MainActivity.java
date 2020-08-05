@@ -2,6 +2,7 @@ package com.example.well_beingapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.multidex.MultiDex;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.Future;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -84,9 +86,9 @@ public class MainActivity extends AppCompatActivity {
                                         Toast.makeText(MainActivity.this, "Account created", Toast.LENGTH_SHORT).show();
 
                                         Map<String, Object> user = new HashMap<>();
-                                        user.put("fullName",name);
-                                        user.put("email",email);
-                                        user.put("password",pword);
+                                        user.put("fullName", name);
+                                        user.put("email", email);
+                                        user.put("password", pword);
 
                                         fStore.collection("users")
                                                 .add(user)
@@ -119,8 +121,8 @@ public class MainActivity extends AppCompatActivity {
         textViewSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(i);
+                Intent mainToLogin = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(mainToLogin);
 
             }
         });

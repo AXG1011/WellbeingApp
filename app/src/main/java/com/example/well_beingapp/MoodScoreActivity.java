@@ -4,17 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MoodScoreActivity extends AppCompatActivity {
 
     int finalScore;
+    Button moodLogBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mood_score);
+        moodLogBtn = findViewById(R.id.moodLogButton);
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -27,6 +30,21 @@ public class MoodScoreActivity extends AppCompatActivity {
         finalScore = intent.getIntExtra(MoodQuizActivity.EXTRA_NUMBER, 0);
         TextView textViewScore = findViewById(R.id.final_mood_score);
         textViewScore.setText("" + finalScore + "%");
+
+        openMoodLog();
+
+    }
+
+    public void openMoodLog(){
+
+        moodLogBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentToMoodLog = new Intent(MoodScoreActivity.this, MoodLogActivity.class);
+                startActivity(intentToMoodLog);
+
+            }
+        });
 
     }
 
