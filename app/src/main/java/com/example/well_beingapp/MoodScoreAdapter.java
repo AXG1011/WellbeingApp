@@ -11,9 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
-public class moodScoreAdapter extends FirestoreRecyclerAdapter<ScoreLog, moodScoreAdapter.moodScoreHolder> {
+public class MoodScoreAdapter extends FirestoreRecyclerAdapter<ScoreLog, MoodScoreAdapter.moodScoreHolder> {
 
-    public moodScoreAdapter(@NonNull FirestoreRecyclerOptions<ScoreLog> options) {
+    public MoodScoreAdapter(@NonNull FirestoreRecyclerOptions<ScoreLog> options) {
         super(options);
     }
 

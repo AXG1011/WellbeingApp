@@ -7,7 +7,7 @@ public class ScoreLog {
     private String uid;
 
     public ScoreLog(){
-        // Empty constructor needed for firebase to create ScoreLog object
+        // Empty constructor needed for firebase to create score object
     }
 
     public ScoreLog(String date, int moodScore, String uid){

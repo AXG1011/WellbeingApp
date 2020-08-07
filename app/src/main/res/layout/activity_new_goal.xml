@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".NewGoalActivity">
+
+    <TextView
+        android:id="@+id/goal_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the title of your goal here:"
+        android:paddingLeft="3dp"
+        android:textColor="@android:color/black"/>
+
+    <EditText
+        android:id="@+id/edit_text_goal_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Goal title"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter a description of your goal here:"
+        android:paddingTop="20dp"
+        android:paddingLeft="3dp"
+        android:textColor="@android:color/black"/>
+
+    <EditText
+        android:id="@+id/edit_text_goal_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Goal description"
+        android:inputType="textMultiLine"/>
+
+    <TextView
+        android:id="@+id/end_date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the date you wish to meet your goal:"
+        android:paddingTop="20dp"
+        android:paddingLeft="3dp"
+        android:textColor="@android:color/black"/>
+
+    <EditText
+        android:id="@+id/edit_text_end_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="End date"
+        android:inputType="date"/>
+
+</LinearLayout>

@@ -15,12 +15,13 @@ import com.google.firebase.firestore.Query;
 
 public class MoodLogActivity extends AppCompatActivity {
 
-    FirebaseAuth fAuth = FirebaseAuth.getInstance();
+    private FirebaseAuth fAuth = FirebaseAuth.getInstance();
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private CollectionReference uidRef = db.collection("moodScores");
 
-    private moodScoreAdapter adapter;
+    private MoodScoreAdapter adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,13 +36,12 @@ public class MoodLogActivity extends AppCompatActivity {
     public void setUpRecyclerView() {
 
         Query query = uidRef.whereEqualTo("uid", fAuth.getCurrentUser().getUid());
-        query.orderBy("date", Query.Direction.DESCENDING);
 
             FirestoreRecyclerOptions<ScoreLog> options = new FirestoreRecyclerOptions.Builder<ScoreLog>()
                     .setQuery(query, ScoreLog.class)
                     .build();
 
-            adapter = new moodScoreAdapter(options);
+            adapter = new MoodScoreAdapter(options);
 
             RecyclerView recyclerView = findViewById(R.id.recycler_view);
             recyclerView.setHasFixedSize(true);
