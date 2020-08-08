@@ -33,7 +33,6 @@ public class MoodQuizActivity extends AppCompatActivity {
     private TextView textViewResult;
 
     Button calculateScoreButton;
-    Button goToMoodLogButton;
     int totalScore;
 
     FirebaseAuth fAuth;
@@ -61,7 +60,6 @@ public class MoodQuizActivity extends AppCompatActivity {
         fifthEntry = findViewById(R.id.entry_five);
         textViewResult = findViewById(R.id.result);
         calculateScoreButton = findViewById(R.id.calculate_score_button);
-        goToMoodLogButton = findViewById(R.id.mood_log_button);
 
         calculateScoreButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,13 +118,6 @@ public class MoodQuizActivity extends AppCompatActivity {
 
         });
 
-        goToMoodLogButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openMoodLog();
-            }
-        });
-
     }
 
     public void openMoodScore(){
@@ -137,11 +128,6 @@ public class MoodQuizActivity extends AppCompatActivity {
         intentToMoodScore.putExtra(EXTRA_NUMBER, finalScore);
         startActivity(intentToMoodScore);
 
-    }
-
-    public void openMoodLog(){
-        Intent intentToMoodLog = new Intent(this, MoodLogActivity.class);
-        startActivity(intentToMoodLog);
     }
 
 }

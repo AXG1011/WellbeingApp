@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 public class HomeActivity extends AppCompatActivity {
@@ -13,8 +15,6 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        setTitle("Home");
-
 
         ImageView settings = (ImageView) findViewById(R.id.imageView2);
         settings.bringToFront();
@@ -31,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
         self.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent homeToSelf = new Intent(HomeActivity.this, MoodQuizActivity.class);
+                Intent homeToSelf = new Intent(HomeActivity.this, SelfLandingActivity.class);
                 startActivity(homeToSelf);
             }
         });

@@ -12,21 +12,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NewGoalActivity"
-            android:parentActivityName=".FutureActivity"/>
+        <activity android:name=".SelfLandingActivity"></activity>
+        <activity
+            android:name=".NewGoalActivity"
+            android:parentActivityName=".FutureActivity" />
         <activity
             android:name=".MoodScoreActivity"
             android:parentActivityName=".MoodQuizActivity"
             android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name=".MoodLogActivity" />
         <activity android:name=".WorldActivity" />
-        <activity android:name=".FutureActivity"
-            android:launchMode="singleTop"/>
+        <activity
+            android:name=".FutureActivity"
+            android:launchMode="singleTop" />
         <activity android:name=".MoodQuizActivity" />
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

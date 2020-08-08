@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
@@ -30,6 +33,16 @@ public class MoodLogActivity extends AppCompatActivity {
         setTitle("Mood Log");
 
         setUpRecyclerView();
+
+        ImageView goHome = (ImageView) findViewById(R.id.home);
+        goHome.bringToFront();
+        goHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent logToHome = new Intent(MoodLogActivity.this, HomeActivity.class);
+                startActivity(logToHome);
+            }
+        });
 
     }
 
