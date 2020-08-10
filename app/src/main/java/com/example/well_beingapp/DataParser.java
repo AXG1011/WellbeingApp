@@ -2,19 +2,15 @@ package com.example.well_beingapp;
 
 import java.util.HashMap;
 import android.util.Log;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class DataParser {
 
-    private HashMap<String, String> getPlace(JSONObject googlePlaceJson)
-    {
+    private HashMap<String, String> getPlace(JSONObject googlePlaceJson) {
         HashMap<String, String> googlePlaceMap = new HashMap<>();
         String placeName = "--NA--";
         String vicinity= "--NA--";
@@ -23,7 +19,6 @@ public class DataParser {
         String reference="";
 
         Log.d("DataParser","jsonobject ="+googlePlaceJson.toString());
-
 
         try {
             if (!googlePlaceJson.isNull("name")) {
@@ -52,8 +47,8 @@ public class DataParser {
         return googlePlaceMap;
 
     }
-    private List<HashMap<String, String>>getPlaces(JSONArray jsonArray)
-    {
+
+    private List<HashMap<String, String>>getPlaces(JSONArray jsonArray) {
         int count = jsonArray.length();
         List<HashMap<String, String>> placelist = new ArrayList<>();
         HashMap<String, String> placeMap = null;
@@ -70,8 +65,7 @@ public class DataParser {
         return placelist;
     }
 
-    public List<HashMap<String, String>> parse(String jsonData)
-    {
+    public List<HashMap<String, String>> parse(String jsonData) {
         JSONArray jsonArray = null;
         JSONObject jsonObject;
 
