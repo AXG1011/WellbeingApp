@@ -51,7 +51,7 @@ public class HomeActivity extends AppCompatActivity {
         world.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent homeToWorld = new Intent(HomeActivity.this, WorldActivity.class);
+                Intent homeToWorld = new Intent(HomeActivity.this, WorldLandingActivity.class);
                 startActivity(homeToWorld);
             }
         });

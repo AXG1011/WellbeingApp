@@ -21,8 +21,8 @@ public class SelfLandingActivity extends AppCompatActivity {
         goToMoodQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent homeToSettings = new Intent(SelfLandingActivity.this, MoodQuizActivity.class);
-                startActivity(homeToSettings);
+                Intent landingToQuiz = new Intent(SelfLandingActivity.this, MoodQuizActivity.class);
+                startActivity(landingToQuiz);
             }
         });
 
@@ -30,11 +30,10 @@ public class SelfLandingActivity extends AppCompatActivity {
         goToMoodLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent homeToSettings = new Intent(SelfLandingActivity.this, MoodLogActivity.class);
-                startActivity(homeToSettings);
+                Intent landingToLog = new Intent(SelfLandingActivity.this, MoodLogActivity.class);
+                startActivity(landingToLog);
             }
         });
-
 
     }
 }

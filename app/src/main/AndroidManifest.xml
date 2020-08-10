@@ -2,8 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.well_beingapp">
 
-    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +15,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SelfLandingActivity"></activity>
+        <activity android:name=".WorldLandingActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".WorldActivity"
+            android:label="@string/title_activity_world" />
+        <activity android:name=".SelfLandingActivity" />
         <activity
             android:name=".NewGoalActivity"
             android:parentActivityName=".FutureActivity" />
@@ -21,17 +33,19 @@
             android:parentActivityName=".MoodQuizActivity"
             android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name=".MoodLogActivity" />
-        <activity android:name=".WorldActivity" />
         <activity
             android:name=".FutureActivity"
             android:launchMode="singleTop" />
         <activity android:name=".MoodQuizActivity" />
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
