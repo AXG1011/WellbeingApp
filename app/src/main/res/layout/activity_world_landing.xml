@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SelfLandingActivity">
+    tools:context=".SelfLandingActivity"
+    android:background="@drawable/gradient_background_two">
 
     <ImageView
         android:id="@+id/imageView8"
@@ -30,6 +31,7 @@
         android:layout_marginTop="15dp"
         android:text="Find opportunities"
         android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/holo_blue_light"
         android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiz_text" />
@@ -47,7 +49,9 @@
         android:textColor="@android:color/white"
         android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mood_log_text" />
+        app:layout_constraintTop_toBottomOf="@+id/mood_log_text"
+        android:backgroundTint="@android:color/holo_blue_light"
+        />
 
     <TextView
         android:id="@+id/mood_log_text"
@@ -60,7 +64,8 @@
         android:text="Press the button below to see your \n volunteering log and add a new entry:"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_find_opps" />
+        app:layout_constraintTop_toBottomOf="@+id/button_find_opps"
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/quiz_text"
@@ -73,7 +78,8 @@
         android:text="Press the button below to find \n volunteering organisations near you:"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@android:color/white"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,11 +18,14 @@
 
     <Button
         android:id="@+id/volunteering_button"
-        android:layout_width="295dp"
+        android:layout_width="259dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="493dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@android:color/holo_blue_light"
         android:onClick="findLocalVolunteeringOpps"
         android:text="Volunteer Centres Near Me"

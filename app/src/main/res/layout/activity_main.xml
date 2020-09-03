@@ -27,7 +27,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="136dp"
         android:layout_marginLeft="136dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@android:color/holo_blue_light"
         android:text="Sign Up"
         android:textColor="@android:color/white"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="63dp"
         android:layout_marginLeft="63dp"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
         android:text="Already have an account? \nSign in here"
         android:textAlignment="center"
@@ -56,7 +57,8 @@
         android:hint="Email"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextName"
+        android:textColor="@android:color/white"/>
 
     <EditText
         android:id="@+id/editTextName"
@@ -69,7 +71,8 @@
         android:hint="Full name"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:textColor="@android:color/white"/>
 
     <EditText
         android:id="@+id/editTextTextPassword"
@@ -81,6 +84,7 @@
         android:hint="Create password"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
+        android:textColor="@android:color/white"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

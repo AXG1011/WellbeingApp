@@ -12,50 +12,48 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp">
-        
+
         <TextView
-            android:id="@+id/mood_date"
+            android:id="@+id/volunteer_org_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Date"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:text="Organisation name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:maxLines="1"
-            android:layout_toStartOf="@id/mood_score"
-            android:layout_toLeftOf="@id/mood_score"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:ellipsize="end"/>
 
         <TextView
-            android:id="@+id/journal_entry"
+            android:id="@+id/volunteering_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Journal entry"
+            android:text="Date"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_below="@+id/volunteer_org_name"
+            android:layout_alignParentLeft="true"
+            android:paddingTop="2dp"/>
+
+        <TextView
+            android:id="@+id/volunteering_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volunteering description"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:layout_below="@+id/mood_date"
+            android:layout_below="@+id/volunteering_date"
             android:textColor="@android:color/white"
-            android:layout_alignParentLeft="true" />
+            android:layout_alignParentLeft="true"
+            android:paddingTop="7dp"/>
 
         <TextView
-            android:id="@+id/mood_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Score"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:paddingTop="5dp"/>
-
-        <TextView
-            android:id="@+id/score_uid"
+            android:id="@+id/volunteer_uid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:text="uid"
-            android:layout_below="@+id/mood_date"
             android:layout_alignParentLeft="true"
+            android:layout_below="@id/volunteering_date"
             android:visibility="invisible"/>
 
     </RelativeLayout>
