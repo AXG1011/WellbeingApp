@@ -160,7 +160,7 @@ public class WorldActivity extends FragmentActivity implements OnMapReadyCallbac
         googlePlaceUrl.append("location=" + latitude + "," + longitude);
         googlePlaceUrl.append("&radius=" + PROXIMITY_RADIUS);
         googlePlaceUrl.append("&name=" + nearbyPlace);
-        googlePlaceUrl.append("&key=AIzaSyB6cssYjXXNOeAFrTouss9dGk1OYE5e7fo"); // Google Places API key required here or the search/auto-locate features will not work
+        googlePlaceUrl.append("&key=API-KEY-HERE"); // Google Places API key required here or the search/auto-locate features will not work
 
         Log.d("WorldActivity", "url = " + googlePlaceUrl.toString());
 
